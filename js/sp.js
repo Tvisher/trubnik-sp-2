@@ -67,7 +67,7 @@ initTwentytwenty();
 
 $(".show-more-link").on("click", function () {
     $(this).parent().find('.__hidden').slideToggle("slow");
-    $(this).addClass('hide');
+    $(this).toggleClass('hide');
 });
 
 

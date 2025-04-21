@@ -90,6 +90,24 @@
     line-height: 150%;
     cursor: pointer;
     margin-top: 40px;
+
+    .show-more-link__text:nth-child(2) {
+        display: none;
+    }
+
+    &.hide {
+        .show-more-ico {
+            transform: scaleX(-1);
+        }
+
+        .show-more-link__text:nth-child(2) {
+            display: block;
+        }
+
+        .show-more-link__text:nth-child(1) {
+            display: none;
+        }
+    }
 }
 
 .show-more-ico {
@@ -97,6 +115,7 @@
     width: 72px;
     display: flex;
     align-items: center;
+    transition: transform .3s ease-in-out;
 
     svg {
         object-fit: contain;
@@ -373,10 +392,7 @@
     display: none;
 }
 
-.show-more-link.hide {
-    opacity: 0;
-    pointer-events: none;
-}
+
 
 ._has-lines-bg {
     background-image: url(../img/dynasty-bg.svg);
@@ -614,6 +630,9 @@
 }
 
 @media (max-width: 768px) {
+    .origins-modal__slide .slide-text {
+        font-size: 16px;
+    }
 
     .header-section__title {
         font-size: 48px;
