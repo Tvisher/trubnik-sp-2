@@ -234,6 +234,7 @@
 .slide-num {
     position: relative;
     z-index: 2;
+    transition: color .3s ease-in-out;
 }
 
 .vertical-video-slide__descr {
@@ -672,7 +673,7 @@
 
     .origins-modal__title {
         padding-right: 35px;
-        font-size: 32px;
+        font-size: 24px;
     }
 
     .origins-modal__text._italic {
@@ -707,5 +708,38 @@
 
     .fancybox__slide {
         padding: 20px;
+    }
+
+    .origins-modal__close {
+        width: 30px;
+        height: 30px;
+        top: 10px;
+        right: 10px;
+    }
+
+    .vertical-video-slide.swiper-slide-active {
+        .vertical-video-slide__image::after {
+            opacity: 1;
+        }
+
+        .slide-num {
+            color: #dc6f2d;
+        }
+    }
+
+    .vertical-video-slide {
+        width: 90%;
+    }
+
+    .vertical-video-slide__image {
+        height: 115vw;
+    }
+
+    .show-more-link {
+        font-size: 16px;
+    }
+
+    .vertical-video-slider {
+        padding-top: 40px;
     }
 }
